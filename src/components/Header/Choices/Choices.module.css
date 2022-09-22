@@ -9,6 +9,25 @@
   color: #fff;
 }
 
+.wrapper {
+  position: relative;
+}
+
+.list {
+  position: absolute;
+  width: 300px;
+  padding: 20px 52px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: #00c78b;
+  color: #fff;
+}
+
+.item {
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .button {
     width: 220px;
