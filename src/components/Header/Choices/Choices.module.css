@@ -22,10 +22,23 @@
   font-size: 18px;
   background-color: #00c78b;
   color: #fff;
+  top: 68px;
+  left: 0;
+
 }
 
 .item {
   cursor: pointer;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+
+.item:hover {
+  background-color: #009468;
+}
+
+.item:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1024px) {
