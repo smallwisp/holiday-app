@@ -1,24 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { URI_API } from '../../../const/const';
+import React, { useContext, useState } from 'react';
 import { holidaysContext } from '../../../context/holidaysContext';
+import { useHolidays } from '../../../hooks/useHolidays';
 import style from './Choices.module.css';
 
 const Choices = () => {
   const [isOpenChoices, setIsOpenChoices] = useState(false);
   const {holiday, setHoliday} = useContext(holidaysContext);
-  const [holidays, setHolidays] = useState({});
+  const [holidays] = useHolidays();
 
-  useEffect(() => {
-    fetch(URI_API)
-      .then(response => {
-        if (response.status !== 200) {
-          throw new Error(response.status)
-        }
-        return response.json()
-      })
-      .then(data => setHolidays(data))
-      .catch(err => console.error(err));
-  }, []);
   const toggleChoices = () => {
     setIsOpenChoices(!isOpenChoices)
   };
